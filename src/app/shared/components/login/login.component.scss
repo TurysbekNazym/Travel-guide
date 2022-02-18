@@ -1,0 +1,18 @@
+.row {
+    position: relative;
+}
+.logo {
+    position: absolute;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+.login-img {
+    background-image: url(../../../../assets/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+}

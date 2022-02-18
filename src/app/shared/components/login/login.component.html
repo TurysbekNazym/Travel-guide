@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+
+        <div class="login col-md-6">
+            <form class="login col-md-10" [formGroup]="loginForm">
+                <div class="login-title">
+                    <h1>Login</h1>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+                    <p class="invaild" *ngIf="loginFormControl.email.errors?.email">Must contain @</p>
+                </div>
+                <div class="mb-4">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                    <p class="invaild" *ngIf="loginFormControl.password.errors?.minlength">Password must be more than 8
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid"
+                    (click)="onClick()">Submit</button>
+            </form>
+        </div>
+
+        <div class=" login col-md-6">
+            <div class="login-img ">
+            </div>
+        </div>
+    </div>
+</div>
